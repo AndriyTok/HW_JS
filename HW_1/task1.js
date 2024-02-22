@@ -1,4 +1,5 @@
 //task 1
+console.log('----------------------Task1-------------------------');
 let st1 = "hello";
 let st2= "owu";
 let st3="com";
