@@ -1,9 +1,9 @@
 //task 1
 console.log('----------------------Task1-------------------------');
-let st1 = `hello`;
-let st2= `owu`;
-let st3=`com`;
-let st4=`ua`;
+let st1 = 'hello';
+let st2= 'owu';
+let st3='com';
+let st4='ua';
 let num1=1;
 let num2=10;
 let num3=-999;
