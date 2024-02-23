@@ -6,13 +6,13 @@
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password.
 // Вивести в консоль пароль кожного користувача
 
-console.log('------------PART_1-------------')
+console.log('-----------PART_1.1------------')
 let arr1=["el1","el2", "el3", "el4", "el5", "el6","el7", "el8", "el9", "el10"]
 for (let i = 0; i < arr1.length; i++) {
     console.log(arr1[i]);
 }
 console.log('\n')
-console.log('------------PART_2-------------')
+console.log('-----------PART_1.2------------')
 let book1 ={
     title: 'Moby Dick',
     pageCount: 113,
@@ -30,7 +30,7 @@ let book3 ={
 };
 console.log(book1, book2, book3)
 console.log('\n')
-console.log('------------PART_3-------------')
+console.log('-----------PART_1.3------------')
 book1.author=[];
 book2.author=[];
 book3.author=[];
@@ -43,7 +43,7 @@ book3.author["age"]= 77;
 console.log(book1, book2, book3)
 
 console.log('\n')
-console.log('------------PART_4-------------')
+console.log('-----------PART_1.4------------')
 let users=[
     {name: "Andriy", username: "user1",password:183482},
     {name: "Anna", username: "user2",password:439839},
