@@ -18,7 +18,7 @@
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-for (const Item of listOfItems) {
+for (let Item of listOfItems) {
     document.write(`<div><ul>
 <li>${Item}</li>
 </ul></div>`)
