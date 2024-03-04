@@ -108,7 +108,7 @@ const mas_3 = [
 ]
 convert_mas_with_objects(mas_3)
 //масив для десятого, одинадцятого та дванадцятого завдання
-const mas4 = [0, -5, -10];
+const mas4 = [0, -100, -200, 12, 1234];
 document.write(`
 <p>Мінімальний елемент масиву: ${minimum_from_mas(mas4)}</p>
 `)
