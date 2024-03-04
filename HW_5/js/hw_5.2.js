@@ -14,11 +14,10 @@
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
 //функція для п'ятого завдання
-function paragraph(text){
-    document.write(`<p>${text}</p>`)
-}
+let paragraph = text => document.write(`<p>${text}</p>`)
+
 //функція для шостого завдання
-function list_1(text){
+let list_1 = text =>
     document.write(`
     <p>Завдання 6: створення списку через функцію (три елемента li з однаковим текстом, що задається через аргумент)</p>
     <ul> 
@@ -27,19 +26,19 @@ function list_1(text){
     <li>${text}</li>   
 </ul>
 `)
-}
+
 //функція для сьомого завдання
-function list_2 (text, number){
+let list_2  = (text, number) => {
     document.write(`
     <p>Завдання 7: створення списку через функцію (кількість елементів li задається через другий числовий аргумент)</p>
     <ul>`)
     for (let i = 0; i <= number; i++) {
-       document.write(`<li>${text}</li>`)
+        document.write(`<li>${text}</li>`)
     }
     document.write(`</ul>`)
 }
 //функція для восьмого завдання
-function convert_mas (data){
+let convert_mas = data => {
     document.write(`
      <p>Завдання 8: створення списку через функцію на основі масиву</p>
      <ul>`)
@@ -49,17 +48,17 @@ function convert_mas (data){
     document.write(`</ul>`)
 }
 //функція для дев'ятого завдання
-function convert_mas_with_objects(data){
+let convert_mas_with_objects = data => {
     document.write(`<p>Завдання 9: створення списку через функцію на основі масиву з об'єктами</p>`)
     for (const datum of data) {
         document.write(`<p>Object's id:${datum.id}; Object's name: ${datum.name}; Object's age: ${datum.age} </p>`)
     }
 }
 //функція для десятого завдання
-function minimum_from_mas(data){
+let minimum_from_mas = data => {
     document.write(`<p>Завдання 10: виведення найменшого елементу з масиву</p>`)
     let temp = data[0];
-    for (let i = 1; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         if (data[i] < temp) {
             temp = data[i];
         }
@@ -67,7 +66,7 @@ function minimum_from_mas(data){
     return temp;
 }
 //функція для одинадцятого завдання
-function sum(arr){
+let sum = arr => {
     document.write(`<p>Завдання 11: виведення суми елементів масиву</p>`)
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -76,7 +75,7 @@ function sum(arr){
     return sum;
 }
 //функція для дванадцятого завдання
-function swap_indexes(arr, index1, index2){
+let swap_indexes = (arr, index1, index2) => {
     document.write(`<p>Завдання 12: Заміна елементів масиву за індексами</p>`)
     let temp = arr[index1]
     arr[index1]=arr[index2];
@@ -84,7 +83,7 @@ function swap_indexes(arr, index1, index2){
     return arr;
 }
 //функція для тринадцятого завдання
-function exchange(sumUAH,currencyValues,exchangeCurrency){
+let exchange = (sumUAH,currencyValues,exchangeCurrency) => {
     document.write(`<p>Завдання 13: Функція для обміну валют</p>`)
     for (let i = 0; i < currencyValues.length; i++) {
         if (exchangeCurrency === currencyValues[i].currency) {
@@ -109,7 +108,7 @@ const mas_3 = [
 ]
 convert_mas_with_objects(mas_3)
 //масив для десятого, одинадцятого та дванадцятого завдання
-const mas4 = [0, -100, -200];
+const mas4 = [0, -5, -10];
 document.write(`
 <p>Мінімальний елемент масиву: ${minimum_from_mas(mas4)}</p>
 `)
