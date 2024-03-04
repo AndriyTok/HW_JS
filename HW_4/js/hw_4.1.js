@@ -35,5 +35,9 @@ function cylinder_square(h,r){
 }
 //функція для четвретого завдання
 function show_elements(elements){
- return elements;
+    let result =' ';
+    for (const element of elements) {
+        result += element + '<br>';
+    }
+    return result;
     }

@@ -58,11 +58,13 @@ function convert_mas_with_objects(data){
 //функція для десятого завдання
 function minimum_from_mas(data){
     document.write(`<p>Завдання 10: виведення найменшого елементу з масиву</p>`)
-    for (let i = 0; i < data.length; i++) {
-        if (data[0] > data[i]){
-            return data[i]
+    let temp = data[0];
+    for (let i = 1; i < data.length; i++) {
+        if (data[i] < data[i + 1]) {
+            temp = data[i];
         }
     }
+    return temp;
 }
 //функція для одинадцятого завдання
 function sum(arr){
