@@ -93,3 +93,40 @@ let mas_3 = [10,8,-7,55,987,-1011,0,1050,0]
 let mas_4 = mas_3.map(number => number.toString()) //toString - переведення у String
 console.log(mas_4)
 //Завдання 7
+console.log('-------TASK 7--------')
+let mas_5 = [11,21,3];
+let sortNums = (nums, direction) => {
+    if (direction === 'ascending'){
+        nums.sort((first, second) => {return first - second})
+        console.log('ascending:',mas_5)
+    }
+    if (direction === 'descending'){
+        nums.sort((first, second) => {return second - first})
+        console.log('descending:',mas_5)
+    }
+}
+sortNums(mas_5,'ascending')
+sortNums(mas_5,'descending')
+//Завдання 8
+console.log('-------TASK 8--------')
+let courses = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+console.log('Sorted',courses.sort(
+    (first, second) =>
+    {return second.monthDuration-first.monthDuration}))
+
+console.log('Filtered',courses.filter((course) => course.monthDuration > 5))
+console.log('Mapped',courses.map(
+ (course, index)=>({id:index+1, title:course.title, duration:course.monthDuration})))
+//Завдання 9
+console.log('-------TASK 9--------')
+//Завдання 10
+console.log('-------TASK 10--------')
+//Завдання 11
+console.log('-------TASK 11--------')
