@@ -126,6 +126,28 @@ console.log('Mapped',courses.map(
  (course, index)=>({id:index+1, title:course.title, duration:course.monthDuration})))
 //Завдання 9
 console.log('-------TASK 9--------')
+let suits = ['spade', 'diamond', 'heart', 'clubs'];
+let values = ['6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'];
+//масив, в який буде пушитися колода ⬇
+let deck = [];
+//цикл для створення колоди
+for (let suit of suits) {
+    for (let value of values) {
+        let color;
+        if (suit === 'heart' || suit === 'diamond') {
+            color = 'red';
+        } else {
+            color = 'black';
+        }
+        deck.push({ suit: suit, value: value, color: color });
+    }
+}
+console.log('Колода:',deck);
+console.log('Піковий туз:', deck.find(card => card.suit === 'spade' && card.value === 'ace'));
+console.log('Всі шістки:', deck.filter((card) => (parseInt(card.value) === 6)));
+console.log('Всі червоні карти:', deck.filter((card) => (card.color === 'red')));
+console.log('Всі буби:', deck.filter((card) => (card.suit === 'diamond')));
+console.log('Всі трефи 9+:', deck.filter(card => card.suit === 'clubs' && (parseInt(card.value)) >= 9));
 //Завдання 10
 console.log('-------TASK 10--------')
 //Завдання 11
