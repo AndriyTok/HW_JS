@@ -228,7 +228,8 @@ let coursesArray = [
     }
 ];
 console.log("Всі об'єкти, в яких в modules є sass:",
-    coursesArray.filter(course => course.modules.includes('sass')),
+    coursesArray.filter(course => course.modules.includes('sass')))
+console.log(
     "Всі об'єкти, в яких в modules є docker:",
     coursesArray.filter(course => course.modules.includes('docker'))
 )
