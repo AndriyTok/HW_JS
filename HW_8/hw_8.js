@@ -5,7 +5,7 @@
 //
 // 1.2 Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
 
-console.log('------------TASK1--------------')
+console.log('-----------TASK1-------------')
 function User (id, name, surname, email, phone) {
     return {
         id,
@@ -36,7 +36,7 @@ console.log('Відсортований масив (id по зростанню)'
 // створити пустий масив, наповнити його 10 об'єктами Client
 // 2.1 Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
 
-console.log('------------TASK2--------------')
+console.log('-----------TASK2-------------')
 class Client {
     constructor(id, name, surname , email, phone, order){
         this.id = id;
@@ -63,6 +63,7 @@ clients.push(
 console.log('Масив клієнтів:',clients)
 console.log('Відсортований масив',
     clients.sort((first, second) => {return first.order.length - second.order.length}))
+
 // 3 Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
 // максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
@@ -70,8 +71,61 @@ console.log('Відсортований масив',
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+console.log('-----------TASK3-------------')
+console.log('Uncomment to check)')
+// function Car(model, brand, year, max_speed, engine){
+//     return {
+//         model,
+//         brand,
+//         year,
+//         max_speed,
+//         engine,
+//         drive(){ console.log(`їдемо зі швидкістю ${this.max_speed} км на годину на ${this.brand} ${this.model}!`)},
+//         info() {
+//             for (let key in this) {
 //
+//                 if (typeof this[key] !== 'function') {
+//                     console.log(`${key} - ${this[key]}`)
+//                 }
+//             }
+//             console.log(`------------`)
+//         },
+//         increaseMaxSpeed (newSpeed) {
+//             this.max_speed = this.max_speed + newSpeed;
+//             console.log(`Їдемо з новою швидкістю ${this.max_speed}км на годину на ${this.brand} ${this.model}!`);
+//         },
+//         changeYear (newValue){
+//             this.year = newValue;
+//             console.log(`Вийшов новий ${this.brand} ${this.model} ${this.year} модельного року!`)
+//         },
+//         addDriver(name, age){
+//             this.driver = {name, age};
 //
+//         }
+//
+//     }
+// }
+// let cars = [];
+// cars.push(
+//     new Car('Model S', 'Tesla', 2020, 250, '3.0L'),
+//     new Car('Civic', 'Honda', 2006, 180, '1.5L'),
+//     new Car('Mustang', 'Ford', 2012, 280, '5.0L'),
+//     new Car('Corolla', 'Toyota', 2022, 200, '2.0L'),
+//     new Car('C-Class', 'Mercedes-Benz', 2022, 240, '3.0L'),
+//     new Car('A6', 'Audi', 2023, 230, '2.0L'),
+//     new Car('Camry', 'Toyota', 2023, 210, '2.5L'),
+//     new Car('F-150', 'Ford', 2015, 200, '3.5L'),
+//     new Car('Wrangler', 'Jeep', 2020, 160, '2.0L'),
+//     new Car('Range Rover', 'Land Rover', 2022, 240, '3.0L')
+// );
+// cars.forEach(car => car.drive())
+// cars.forEach(car => car.info())
+// cars[2].increaseMaxSpeed(30)
+// cars[1].changeYear(2024)
+// cars[3].addDriver('Mykola', '24');
+// console.log(cars[3])
+
 // 4 (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
 // максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
@@ -80,9 +134,61 @@ console.log('Відсортований масив',
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-//
-//
-//
+
+console.log('-----------TASK4-------------')
+class Vehicle {
+    constructor(model, brand, year, max_speed, engine) {
+        this.model = model;
+        this.brand = brand;
+        this.year = year;
+        this.max_speed = max_speed;
+        this.engine = engine;
+    }
+        drive(){ console.log(`їдемо зі швидкістю ${this.max_speed} км на годину на ${this.brand} ${this.model}!`)};
+        info() {
+            for (let key in this) {
+
+                if (typeof this[key] !== 'function') {
+                    console.log(`${key} - ${this[key]}`)
+                }
+            }
+            console.log(`------------`)
+        };
+        increaseMaxSpeed (newSpeed) {
+            this.max_speed = this.max_speed + newSpeed;
+            console.log(`Їдемо з новою швидкістю ${this.max_speed}км на годину на ${this.brand} ${this.model}!`);
+        };
+        changeYear (newValue){
+            this.year = newValue;
+            console.log(`Вийшов новий ${this.brand} ${this.model} ${this.year} модельного року!`)
+        };
+        addDriver(name, age){
+            this.driver = {name, age};
+
+        }
+
+
+}
+let vehicles = [];
+vehicles.push(
+    new Vehicle('Model S', 'Tesla', 2020, 250, '3.0L'),
+    new Vehicle('Civic', 'Honda', 2006, 180, '1.5L'),
+    new Vehicle('Mustang', 'Ford', 2012, 280, '5.0L'),
+    new Vehicle('Corolla', 'Toyota', 2022, 200, '2.0L'),
+    new Vehicle('C-Class', 'Mercedes-Benz', 2022, 240, '3.0L'),
+    new Vehicle('A6', 'Audi', 2023, 230, '2.0L'),
+    new Vehicle('Camry', 'Toyota', 2023, 210, '2.5L'),
+    new Vehicle('F-150', 'Ford', 2015, 200, '3.5L'),
+    new Vehicle('Wrangler', 'Jeep', 2020, 160, '2.0L'),
+    new Vehicle('Range Rover', 'Land Rover', 2022, 240, '3.0L')
+);
+vehicles.forEach(vehicle => vehicle.drive())
+vehicles.forEach(vehicle => vehicle.info())
+vehicles[2].increaseMaxSpeed(30)
+vehicles[1].changeYear(2024)
+vehicles[3].addDriver('Mykola', '24');
+console.log(vehicles[3])
+
 // 5 створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
