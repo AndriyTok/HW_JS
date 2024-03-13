@@ -73,7 +73,7 @@ console.log('Відсортований масив',
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
 console.log('-----------TASK3-------------')
-console.log('Uncomment to check)')
+console.log('Uncomment to check:)')
 // function Car(model, brand, year, max_speed, engine){
 //     return {
 //         model,
@@ -193,3 +193,40 @@ console.log(vehicles[3])
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+console.log('-----------TASK5-------------')
+class Cinderella{
+    constructor(name, age, foot_size) {
+        this.name = name;
+        this.age = age;
+        this.foot_size = foot_size;
+    }
+}
+let cinderellas = [
+    new Cinderella(`Cinderella1`, 18, 36),
+    new Cinderella(`Cinderella2`, 17, 33),
+    new Cinderella(`Cinderella3`, 16, 34),
+    new Cinderella(`Cinderella4`, 22, 37),
+    new Cinderella(`Cinderella5`, 23, 39),
+    new Cinderella(`Cinderella6`, 25, 40),
+    new Cinderella(`Cinderella7`, 27, 31),
+    new Cinderella(`Cinderella8`, 19, 32),
+    new Cinderella(`Cinderella9`, 14, 29),
+    new Cinderella(`Cinderella10`, 30, 42),
+]
+class Prince{
+    constructor(name, age, slip) {
+        this.name = name;
+        this.age = age;
+        this.slip = slip;
+    }
+}
+let prince = new Prince('Sebastian',34, 36)
+for (const cinderella of cinderellas) {
+    if (cinderella.foot_size === 37){
+        console.log(`${cinderella.name} is ${prince.name}'s  wife!`)
+    }
+}
+
+//additional
+// console.log(cinderellas.find(cinderella => cinderella.foot_size === 37).name, `is ${prince.name}'s wife!`);
