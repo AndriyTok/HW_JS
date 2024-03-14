@@ -223,7 +223,7 @@ class Prince{
 }
 let prince = new Prince('Sebastian',34, 36)
 for (const cinderella of cinderellas) {
-    if (cinderella.foot_size === 37){
+    if (cinderella.foot_size === prince.slip){
         console.log(`${cinderella.name} is ${prince.name}'s  wife!`)
     }
 }
