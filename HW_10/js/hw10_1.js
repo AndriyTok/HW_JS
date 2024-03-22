@@ -1,4 +1,4 @@
-// Стоврити форму з трьома полями для name,sruname,age та кнопкою.
+// Стоврити форму з трьома полями для name,surname,age та кнопкою.
 // При натисканні на кнопку зчитати данні з полів, та вивести об'єкт в документ.
 // Іншими словами : заповниои форму, натиснули кнопку, під формою з'явився блок з вашим об'єктом
 
@@ -8,9 +8,9 @@ h1.style.textAlign = 'center'
 document.body.append(h1)
 
 const form = document.createElement('form')
-form.name = 'form1';
-form.style.textAlign = 'center';
-form.style.display = 'flex';
+form.name = 'form1'
+form.style.textAlign = 'center'
+form.style.display = 'flex'
 form.style.justifyContent = 'center'
 form.style.flexWrap = 'wrap'
 
@@ -21,13 +21,19 @@ const element_creator = (element, type, name, text) => {
     form_element.textContent = text;
     form_element.style.width = '50%'; //for each input to start from new line
     form_element.style.margin = '5px';
+    if (form_element.element === 'label'){
+        form_element.for = form_element.type;
+    }
     form.append(form_element)
     return form_element;
 }
 
+const label_for_name1 = element_creator('label','name', '', "Ім'я:" );
 const name1 = element_creator('input', 'text', 'name');
-const surname = element_creator('input', 'text', 'surname');
-const age = element_creator('input', 'text', 'age');
+const label_for_surname = element_creator('label','surname', '', "Прізвище:" );
+const surname = element_creator('input', 'text', 'surname') ;
+const label_for_age = element_creator('label','age', '', "Вік:" );
+const age = element_creator('input', 'text', 'age', );
 const button = element_creator('button', 'button', 'submit', 'Submit');
 
 button.onclick = function (){
