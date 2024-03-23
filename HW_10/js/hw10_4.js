@@ -44,7 +44,7 @@ function showItems(startIndex) {
     {
         let item = data[i];
         let li = document.createElement('li');
-        li.innerText = `ID: ${item.id}, Name:${item.name}`;
+        li.innerText = `ID: ${item.id+1}, Name:${item.name}`;
         ul.appendChild(li);
     }
     div.appendChild(ul);
